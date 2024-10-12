@@ -63,13 +63,49 @@
         }
 
         .cv-link a {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
             text-decoration: none;
-            color: #3498db;
             font-weight: bold;
+            transition: background-color 0.3s;
         }
 
         .cv-link a:hover {
-            text-decoration: underline;
+            background-color: #2980b9;
+            text-decoration: none;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        figure {
+            margin: 0;
+            border: 1px solid #d5d5d5;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        figcaption {
+            font-size: 1.1em;
+            color: #2c3e50;
+            text-align: center;
         }
     </style>
 </head>
@@ -84,7 +120,7 @@
         <a href="#about">About Me</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <a href="#cv-section">Contact</a>
+        <a href="#cv-section">CV</a>
     </nav>
 
     <section id="about">
@@ -97,23 +133,32 @@
     <section id="projects">
         <h2>My Projects</h2>
         <p>Here, you can find some of the projects I’ve worked on:</p>
-    
-        <figure>
-            <img src="ariship.png" alt="Project 1 Image" style="max-width: 100%; height: auto; border-radius: 8px;">
-            <figcaption> Calculating the optimal path from point A to point B in a vector field using calculus of variations.
-                 On the picture is the optimal path with real-life wind conditions from Prague to Ostrava</figcaption>
-        </figure>
-    
-    
+
+        <div class="projects-grid">
+            <figure>
+                <img src="ariship.png" alt="Project 1 Image">
+                <figcaption>Calculating the optimal path from point A to point B in a vector field using calculus of variations. 
+                On the picture is the optimal path with real-life wind conditions from Prague to Ostrava.</figcaption>
+            </figure>
+            <!-- Additional projects can be added like this -->
+            <figure>
+                <img src="project2.jpg" alt="Project 2 Image">
+                <figcaption>Project 2 description goes here, explaining what the project is about and the results achieved.</figcaption>
+            </figure>
+            <figure>
+                <img src="project3.jpg" alt="Project 3 Image">
+                <figcaption>Project 3 description goes here, explaining what the project is about and its significance.</figcaption>
+            </figure>
+        </div>
+
     </section>
-    
 
     <section id="contact">
         <h2>Contact Me</h2>
         <p>Email: <a href="mailto:matejlevhart@gmail.com" style="color: #3498db;">matejlevhart@gmail.com</a></p>
     </section>
 
-    <section class="cv-section">
+    <section class="cv-section" id="cv-section">
         <div class="cv-link">
             <a href="test.txt" download>Download My CV</a>
         </div>
